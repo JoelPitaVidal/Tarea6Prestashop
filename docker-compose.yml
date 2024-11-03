@@ -1,36 +1,41 @@
-version: '3'
 services:
-  mysql:
-    container_name: Tarea6SXE
-    image: mysql:5.7
-    restart: unless-stopped
+  db:
+    image: mariadb:10.11.2
+    volumes:
+      - db_data_prestashop:/var/lib/mysql 
     environment:
-      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_ROOT_PASSWORD: 123456789
       MYSQL_DATABASE: prestashop
+      MYSQL_USER: prestashop_user
+      MYSQL_PASSWORD: 123456789
     networks:
       - prestashop_network
+
   prestashop:
-    container_name: prestashop
-    image: prestashop/prestashop:latest # Latest stable version of the PrestaShop, to see all availabl>
-    restart: unless-stopped
     depends_on:
-      - mysql
+      - db
+    image: prestashop/prestashop:latest
     ports:
-      - 8080:80
+      - "9800:80"
+    restart: no
     environment:
-      PS_INSTALL_AUTO: 1
-      PS_DOMAIN:  localhost:8080
-      DB_SERVER: myDefinitivesql
+      PS_DEV_MODE: 0
+      PS_HOST_MODE: 0
+      PS_DEMO_MODE: 0
+      DB_SERVER: db
+      DB_USER: prestashop_user
+      DB_PASSWD: 123456789
+      DB_PREFIX: ps_
       DB_NAME: prestashop
-      DB_USER: root
-      DB_PASSWD: admin
+      PS_LANGUAGE: en
+      PS_SHOP_NAME: Tienda Joel SXE
+      PS_DOMAIN: "localhost:9800"
     networks:
       - prestashop_network
+
+volumes:
+  db_data_prestashop:
+
 networks:
-    prestashop_network:
-
-
-
-
-
+  prestashop_network:
 
