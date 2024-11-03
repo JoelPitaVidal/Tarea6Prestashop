@@ -15,7 +15,7 @@ prestashop como de la base de datos están funcionando.
 
 >Aceptamos todos los acuerdos y licencias pertinentes
 
-![Texto alternativo](Informacion.png)
+![Texto alternativo](informacion.png)
 
 >Introducimos la información sobre nuestra tienda, el nombre y el país, 
 y los datos de la cuenta:
@@ -37,7 +37,7 @@ y los datos de la cuenta:
 -Contraseña.
 -Prefijo de las tablas.
 
-![Texto alternativo](instalacion.png)
+![Texto alternativo](Instalacion.png)
 
 >Y finalmente esperamos a que la instalación termine.
 
