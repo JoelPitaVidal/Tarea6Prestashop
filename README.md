@@ -6,4 +6,5 @@ prestashop como de la base de datos están funcionando.
 
 Accedemos al menú de instalación desde el navegador, poniendo lo siguiente:
 -`http://192.168.0.30:9800`
-![Texto alternativo]([inicio-copia.png](https://github.com/JoelPitaVidal/Tarea6Prestashop/blob/main/inicio%20-%20copia.png))
+
+![Texto alternativo](inicio-copia.png)
