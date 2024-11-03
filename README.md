@@ -15,7 +15,7 @@ prestashop como de la base de datos están funcionando.
 
 >Aceptamos todos los acuerdos y licencias pertinentes
 
-![Texto alternativo]([informacion](Instalacion.png)
+![Texto alternativo]([informacion]([Instalacion.png](https://github.com/JoelPitaVidal/Tarea6Prestashop/blob/main/Instalacion.png))
 
 >Introducimos la información sobre nuestra tienda, el nombre y el país, 
 y los datos de la cuenta:
